@@ -1,5 +1,4 @@
 using System;
-using Jinqik.D365;
 using Microsoft.Xrm.Sdk;
 
 namespace Jinqik.D365
@@ -9,11 +8,8 @@ namespace Jinqik.D365
         private string _secureSetting;
         private string _unsecureSetting;
 
-        public BasePlugin()
-        {
-        }
 
-        public BasePlugin(string secureSetting, string unsecureSetting)
+        protected BasePlugin(string secureSetting, string unsecureSetting)
         {
             _secureSetting = secureSetting;
             _unsecureSetting = unsecureSetting;
@@ -26,4 +22,3 @@ namespace Jinqik.D365
         }
     }
 }
-
